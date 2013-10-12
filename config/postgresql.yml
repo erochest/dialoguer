@@ -1,0 +1,24 @@
+Default: &defaults
+  user: dialoguer
+  password: dialoguer
+  host: localhost
+  port: 5432
+  database: dialoguer
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: dialoguer_test
+  <<: *defaults
+
+Staging:
+  database: dialoguer_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: dialoguer_production
+  poolsize: 100
+  <<: *defaults
