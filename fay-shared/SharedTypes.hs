@@ -4,13 +4,13 @@ module SharedTypes where
 
 import Prelude
 import Data.Data
-import Language.Fay.Yesod
+-- import Language.Fay.Yesod
 #ifdef FAY
 import FFI
 #else
 --import Language.Fay.FFI
 #endif
 
-data Command = GetFib Int (Returns Int)
+data Command = Noop
     deriving (Read, Typeable, Data)
 

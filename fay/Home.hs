@@ -28,10 +28,4 @@ parseInt :: String -> Fay Int
 parseInt = ffi "window.parseInt(%1, 10)"
 
 main :: Fay ()
-main = do
-    input <- getElementById "fibindex"
-    result <- getElementById "fibresult"
-    onKeyUp input $ do
-        indexS <- getAttribute "value" input
-        index <- parseInt indexS
-        call (GetFib index) $ setInnerHTML result . show
+main = return ()
